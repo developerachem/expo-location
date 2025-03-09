@@ -10,6 +10,13 @@ To install the package, run:
 
         yarn add expo-location
 
+🚀 Clone Repository
+
+To clone the project please use this command
+
+        git clone https://github.com/developerachem/expo-location.git
+
+
 📌 Features
 
 Fetch the current location of the device.
