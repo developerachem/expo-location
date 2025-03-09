@@ -60,10 +60,10 @@ export function useCurrentLocation() {
 
   // * Return the location and address
   return {
-    location: memorizedLocation,
+    coordinate: memorizedLocation,
     locationError,
     loading,
     pickCurrentLocation,
-    address: isLoading ? "Loading..." : address,
+    location: isLoading ? "Loading..." : address,
   };
 }
