@@ -1,4 +1,4 @@
-📍 Expo Location - Get User Location Easily
+# 📍 Expo Location - Get User Location Easily
 
 🌟 Project Description
 
@@ -8,7 +8,7 @@ This project is built using expo-location to retrieve the device's real-time geo
 
 To install the package, run:
 
-yarn add expo-location
+        yarn add expo-location
 
 📌 Features
 
@@ -30,48 +30,6 @@ Expo (For quick development & testing)
 
 expo-location (For retrieving GPS location)
 
-📖 Usage
-
-📍 Fetch Current Location (Function)
-
-import * as Location from 'expo-location';
-
-const getCurrentLocation = async () => {
-  let { status } = await Location.requestForegroundPermissionsAsync();
-  if (status !== 'granted') {
-    console.log('Permission to access location was denied');
-    return;
-  }
-  
-  let location = await Location.getCurrentPositionAsync({});
-  console.log(location);
-};
-
-📌 Use Current Location (Hook)
-
-import { useState, useEffect } from 'react';
-import * as Location from 'expo-location';
-
-const useCurrentLocation = () => {
-  const [location, setLocation] = useState(null);
-  const [errorMsg, setErrorMsg] = useState(null);
-
-  useEffect(() => {
-    (async () => {
-      let { status } = await Location.requestForegroundPermissionsAsync();
-      if (status !== 'granted') {
-        setErrorMsg('Permission to access location was denied');
-        return;
-      }
-      let location = await Location.getCurrentPositionAsync({});
-      setLocation(location);
-    })();
-  }, []);
-
-  return { location, errorMsg };
-};
-
-export default useCurrentLocation;
 
 ⚠️ Notes
 
